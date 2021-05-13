@@ -1,7 +1,5 @@
-import './ui/styles/test.css';
+import Tooltip from './ui/tooltip';
 
-const sayHello = (name) => {
-  console.log(`Hello, ${name}`);
-};
-
-sayHello('Marijan');
+// create tooltip
+const tooltip = new Tooltip(document.querySelector('.tooltip'));
+tooltip.init();
