@@ -1,14 +1,15 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist/assets'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/assets/',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -28,4 +29,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    }),
+  ],
 };

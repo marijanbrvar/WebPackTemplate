@@ -1,5 +1,3 @@
-import Tooltip from './ui/tooltip';
+import './style.css';
 
-// create tooltip
-const tooltip = new Tooltip(document.querySelector('.tooltip'));
-tooltip.init();
+console.log('Webpack work');
